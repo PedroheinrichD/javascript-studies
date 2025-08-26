@@ -1,3 +1,22 @@
+/*
+== → Igualdade (compara só os valores, ignora o tipo)
+=== → Igualdade estrita (compara valor e tipo)
+!= → Diferença (só compara valor, ignora o tipo)
+!== → Diferença estrita (valor e tipo precisam ser diferentes)
+> → Maior que
+< → Menor que
+>= → Maior ou igual a
+<= → Menor ou igual a
+&& → E lógico (true só se as duas condições forem verdadeiras)
+|| → OU lógico (true se pelo menos uma condição for verdadeira)
+! → NÃO lógico (negação)
+*/
+
+
+
+
+
+
 /* (if) e (else) */
 
 // if --> signifca 'se'
@@ -15,3 +34,37 @@ if (idade >= 18) { // (condição)
 
 // Se a idade for maior ou igual a 18 , o console vai exibir ("Maior de idade , sua idade é...")
 // Caso contrário ("NÃO é maior de idade pois você tem... anos")
+
+
+
+/*=================================================================================================*/
+
+/* Condicional == e === */
+
+// == significa IGUAL ==  --> a string pode ser identificada 
+idade = 20 ; 
+// ou
+idade = "20";
+
+if(idade == 20){
+    console.log("Você tem 20 anos !!") 
+}
+
+
+// === iginifica IGUAL só que rigoroso === --> A string NÃO é usada
+
+idade = 20
+
+if(idade === 20){
+    console.log("Você tem 20 anos !!")
+}
+
+
+/*=================================================================================================*/
+
+
+// USANDO &&
+
+if(idade >= 18 && idade < 60 ){
+    console.log(`Você é um adulto`);
+}
