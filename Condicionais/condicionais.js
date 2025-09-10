@@ -24,7 +24,7 @@
 // se a condição for atendida ->  beleza , caso contrário  -> executa outra alternativa
 
 // verificação se a pessoa é maior de idade
-idade = 19
+ idade = 19
 
 if (idade >= 18) { // (condição)
     console.log(`Maior de idade , sua idade é ${idade} `);
@@ -63,8 +63,33 @@ if(idade === 20){
 /*=================================================================================================*/
 
 
-// USANDO &&
+
+// USANDO && e if e else if
 
 if(idade >= 18 && idade < 60 ){
     console.log(`Você é um adulto`);
+}else if(idade >= 60){
+    console.log(`Você é um idoso`);
+}
+
+
+// um pouco diferente mas segue o mesmo principio
+var verificacao = idade > 18
+
+if(verificacao){
+   console.log('simmmmm');
+}else {
+    console.log('não');
+}
+
+
+
+// preco está caro? PS: até 45 está barato
+
+let preco = 66
+if(preco <= 45){
+    console.log('ta barato demais...');    
+}else {
+    console.log('carooooo');
+    
 }
