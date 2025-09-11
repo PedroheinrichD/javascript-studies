@@ -24,7 +24,7 @@
 // se a condição for atendida ->  beleza , caso contrário  -> executa outra alternativa
 
 // verificação se a pessoa é maior de idade
- idade = 19
+idade = 19
 
 if (idade >= 18) { // (condição)
     console.log(`Maior de idade , sua idade é ${idade} `);
@@ -42,12 +42,12 @@ if (idade >= 18) { // (condição)
 /* Condicional == e === */
 
 // == significa IGUAL ==  --> a string pode ser identificada 
-idade = 20 ; 
+idade = 20;
 // ou
 idade = "20";
 
-if(idade == 20){
-    console.log("Você tem 20 anos !!") 
+if (idade == 20) {
+    console.log("Você tem 20 anos !!")
 }
 
 
@@ -55,7 +55,7 @@ if(idade == 20){
 
 idade = 20
 
-if(idade === 20){
+if (idade === 20) {
     console.log("Você tem 20 anos !!")
 }
 
@@ -66,9 +66,9 @@ if(idade === 20){
 
 // USANDO && e if e else if
 
-if(idade >= 18 && idade < 60 ){
+if (idade >= 18 && idade < 60) {
     console.log(`Você é um adulto`);
-}else if(idade >= 60){
+} else if (idade >= 60) {
     console.log(`Você é um idoso`);
 }
 
@@ -76,9 +76,9 @@ if(idade >= 18 && idade < 60 ){
 // um pouco diferente mas segue o mesmo principio
 var verificacao = idade > 18
 
-if(verificacao){
-   console.log('simmmmm');
-}else {
+if (verificacao) {
+    console.log('simmmmm');
+} else {
     console.log('não');
 }
 
@@ -87,9 +87,44 @@ if(verificacao){
 // preco está caro? PS: até 45 está barato
 
 let preco = 66
-if(preco <= 45){
-    console.log('ta barato demais...');    
-}else {
+if (preco <= 45) {
+    console.log('ta barato demais...');
+} else {
     console.log('carooooo');
-    
+
+}
+
+
+
+// Condicional Ternário --> boolean em uma linha só ? :
+
+let isMember = true;
+let shipping = isMember ? 20 : 5 // depois do ? 'é o que vai ser passado se a condição for (true)' : 'caso contrario outro valor (false)'
+console.log(shipping); // exibe 20
+console.log(isMember ? 'Você é um membro!!' : 'não é um membro');
+
+
+
+// verificando o valor do frete
+let freteGratis = 22
+let valorFrete = 12.99
+let calc = (freteGratis >= 21 ? 'Frete grátis !' : 'Valor do frete: ' + valorFrete)
+console.log(calc);
+
+
+
+// SWTICH --> são multiplos casos 
+let profession = 'policial'
+console.log('Profissão: ' + profession);
+
+
+switch (profession) {
+    case 'fiscal': console.log('Camiseta da Profissão: cinza')
+        break;
+    case 'policial': console.log('Camiseta da Profissão: azul')
+        break;
+    case 'bombeiro': console.log('Camiseta da Profissão: vermelho')
+        break;
+    default: console.log('Sua camisa será: branca')
+        break;
 }
