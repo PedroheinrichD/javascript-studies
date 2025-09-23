@@ -131,34 +131,3 @@ switch (profession) {
 
 
 
-
-// FUNÇÕES 
-/*Uma função em programação é como uma receita de cozinha. Ela tem um nome único, recebe ingredientes (parâmetros),
-realiza passos específicos (corpo da função) e fornece um resultado (valor de retorno) quando é chamada.
-Funções ajudam a organizar o código, torná-lo reutilizável e mais fácil de entender.*/
-
-
-// function name(params) {}
-
-
-function gravidade() {
-    console.log('a gravidade é: '+ 9.8);
-}
-
-gravidade()
-
-
-
-function somar(x , y) {
-    let soma = x + y
-    console.log('resultado da soma: '+ soma);
-}
-somar(2,2)
-
-
-
-function nomeCompletoU(nome , sobrenome){
-    console.log(`seu nome é: ${nome} ${sobrenome}`);
-}
-
-nomeCompletoU("Pedro","Heinrich")
