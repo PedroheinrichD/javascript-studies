@@ -64,16 +64,17 @@ Fórmula da porcentagem: (y / x) * 100
 */
 
 
-
+let porcentagem = 30
+let valor = 200
 
 function calcPct(porcentagem, valor) {
-    valor = 40
-    porcentagem = 25
-    return (valor / porcentagem) * 100
-    
+   let resultC = (valor * porcentagem) / 100
+   return resultC.toFixed(2) + "%"
 }
 
-let calcResult = calcPct()
+
+
+let calcResult = calcPct(30,200)
 console.log(`${porcentagem}% de ${valor} é : ${calcResult} `);
 
 
