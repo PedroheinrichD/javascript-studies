@@ -110,12 +110,12 @@ function precoImovel(metragem, quartos) {
     }
 
 
-    let precoFinalImovel = (m2 * metragem ) * multplicador
+    let precoFinalImovel = (m2 * metragem) * multplicador
 
     console.log(`Imóvel de ${metragem}m² com ${quartos} quartos: R$ ${precoFinalImovel.toFixed(2)}`);
 }
 
-precoImovel(122,2) // exibe --> Imóvel de 122m² com 2 quartos: R$ 439200.00
+precoImovel(122, 2) // exibe --> Imóvel de 122m² com 2 quartos: R$ 439200.00
 
 
 
@@ -126,30 +126,38 @@ Usuário correto : pedro
 senha correta: 123
 */
 
-function validar(usu , senha){
+function validar(usu, senha) {
     if (usu === 'Pedro' && senha === 123) {
         console.log(`Usuario e senha CORRETOS!`);
-    } else{
+    } else {
         console.log(`Acesso NEGADO`);
     }
 }
 
 
-validar('Pedro' , 123)
+validar('Pedro', 123)
 
 
 
 
 // ARROW FUMCTIONS  () => {}
 
-    const somaar = (x , y) => x + y
-    console.log('resultado: '+ somaar(2,2));
-    
+const somaar = (x, y) => x + y
+console.log('resultado: ' + somaar(2, 2));
 
 
 
 
+// MAIS EXEMPLOS DE FUNÇÕES
 
 
 
+function addRaiz(a, b) {
+    const raizQuadrada = (x) => {
+        return x * x
+    }
 
+    return raizQuadrada(a) + raizQuadrada(b)
+}
+
+console.log(addRaiz(2, 2));
