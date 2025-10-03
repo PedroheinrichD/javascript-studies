@@ -7,10 +7,7 @@ console.log(cores);
 console.log(cores[2]); // exibe vermelho
 
 
-
-
-
-
+// array com ingredientes
 let ingredientes = [
     'farinha',
     'ovo',
@@ -31,6 +28,18 @@ console.log(ingredientes); // o ARRAY VAI FICAR ---> (6) ['farinha', 'ovo', 'fer
 console.log(`Total de ingredientes: ${ingredientes.length}`); // exibe (Total de ingredientes: 6)
 
 
+
+
+// OBJETO --> Um objeto em JavaScript é uma caixinha que guarda pares de nome e valor (chave → valor) para organizar dados.
+
+let personagem = {
+    nome: 'pedro', 
+    idade: 19,
+    caracteristicas: {cabelo: 'preto', olhos: ['castanhos','amarelo']} // objeto dentro de objeto com arrays
+}
+
+console.log(`Nome do personagem é: ${personagem.nome}`);
+console.log(`acessando objeto dentro de objeto kkkk -> O ${personagem.nome} tem olhos ${personagem.caracteristicas.olhos[0]}`);
 
 
 
