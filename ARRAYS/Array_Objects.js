@@ -7,6 +7,9 @@ console.log(cores);
 console.log(cores[2]); // exibe vermelho
 
 
+
+
+
 // array com ingredientes
 let ingredientes = [
     'farinha',
@@ -26,6 +29,8 @@ console.log(ingredientes); // o ARRAY VAI FICAR ---> (6) ['farinha', 'ovo', 'fer
 
 
 console.log(`Total de ingredientes: ${ingredientes.length}`); // exibe (Total de ingredientes: 6)
+
+
 
 
 
@@ -59,3 +64,18 @@ console.log(`Seu carro será: ${personagem2.carros[1].modelo} da cor ${personage
 
 
 
+
+
+
+
+// FUNÇÕES DENTRO DE OBJETOS 
+let pessoa = {
+    nome: 'Pedro',
+    sobrenome: 'Dias',
+    idade: 19,
+    nomeCompleto: function() {
+        return this.nome +' '+ this.sobrenome // o THIS acessa o proprio objeto 
+    }
+}
+
+console.log(pessoa.nomeCompleto());
