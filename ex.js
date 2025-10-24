@@ -85,3 +85,75 @@ verificadorSenha('Pedro@!#')
 Dentro do teste, usamos senha.includes(simbolo) → isso verifica se a senha contém aquele símbolo.
 
 Se encontrar pelo menos um, .some() já retorna true.*/
+
+
+
+
+
+
+
+/*Criar um objeto aluno e faz o seguinte no teu código:
+
+1- define nome, nota1, nota2;
+
+2- cria uma função dentro do objeto que calcula e retorna a média;
+
+3- testa no console mostrando o nome do aluno e sua média.*/
+
+
+
+let aluno = {
+    nome: 'Pedro',
+    nota1: 2,
+    nota2: 10,
+    media: function () {
+        return (this.nota1 + this.nota2) / 2
+    }
+}
+
+
+console.log(`a média da aluno é: ${aluno.media()}`);
+
+
+
+
+/*🧩 Desafio prático: Sistema de alunos
+
+O usuário quer que:
+
+1- Tenha vários alunos, cada um com nome e duas notas;
+
+2- Calcule a média de cada um;
+
+Mostre no console o nome e se ele passou ou não, considerando média ≥ 6 como aprovado.
+*/
+let alunos = [
+    {   nome: 'Pedro', nota1: 5, nota2: 8,
+        media: function () {return (this.nota1 + this.nota2) / 2}},
+
+    {   nome: 'Maria', nota1: 7, nota2: 10,
+        media: function () {return (this.nota1 + this.nota2) / 2}},
+
+    {   nome: 'João', nota1: 8, nota2: 9,
+        media: function () {return (this.nota1 + this.nota2) / 2}},
+
+    {   nome: 'Lucas', nota1: 10, nota2: 0,
+        media: function () {return (this.nota1 + this.nota2) / 2}},
+
+    {   nome: 'Kauã', nota1: 2, nota2: 5,
+        media: function () {return (this.nota1 + this.nota2) / 2}}
+
+]
+
+
+for(i = 0 ;  i < alunos.length ; i++){
+    if(alunos[i].media() >= 6){
+        console.log(`Aluno: ${alunos[i].nome} foi APROVADO com a média: ${alunos[i].media().toFixed(1)} nesse bimestre!`);
+    }else{
+        console.log(`Aluno: ${alunos[i].nome} foi REPROVADO nesse bimestre :( com a média: ${alunos[i].media().toFixed(1)}  , porfavor agendar uma nova prova.)`);
+    }
+    
+}
+
+
+
