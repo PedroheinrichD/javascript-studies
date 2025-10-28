@@ -79,3 +79,81 @@ let pessoa = {
 }
 
 console.log(pessoa.nomeCompleto());
+
+
+
+
+
+
+
+
+
+
+// MANIPULAÇÃO DE ARRAY
+
+let fruits =['banana','maçã','uva','melancia']
+
+fruits.push('melão') // push() -> adiciona mais um item no final do array 
+
+fruits.pop() // pop() -> remove o ULTIMO item do array
+
+fruits.shift() // shift() -> remove o PRIMEIRO item do array
+
+fruits.join('/') // join() --> Eles são concatenados em uma string com um separador especificado, EXEMPLO = maçã / uva / melancia
+
+fruits.sort() // --> altera a ordem dos itens do array 
+
+fruits.reverse() // reverte a ordem dos itens do array, ordem decrescente   
+
+
+let bigFruits = fruits.filter( (item) => {return item.length > 4}) // filter() --> filtra retornando um novo array, podemos fazer com Value, Index ou array
+
+
+
+let everyFruits = fruits.every((value) => {return value.length > 3 }) // every() --> Só retorna TRUE caso todos os itens do array estejam de acordo com a verificação
+if(everyFruits){
+    console.log(`Todos os itens do array são maiores que 3`);
+} else{
+    console.log(`algum item não satifaz a verificação`);
+}
+
+
+
+let someFruits = fruits.some((value) => {return value.length > 3 }) // some() --> retorna TRUE caso UM dos itens do array estejam de acordo com a verificação
+if(everyFruits){
+    console.log(`Todos os itens do array são maiores que 3`);
+} else{
+    console.log(`algum item não satifaz a verificação`);
+}
+
+
+if(fruits.includes('uva')){ // includes() --> procura dentro o array, como se fosse um filtro para achar o que quer
+    console.log(`tem uva SIM`);
+} else{
+    console.log(`tem uva NAO`);
+}
+
+
+
+
+// exemplo do sort()
+let cars = [
+    {brand: 'Chevrolet', year: '2015' },
+    {brand: 'Fiat', year: '2022' },
+    {brand: 'hyundai', year: '2018' }
+]
+
+// comparando dois itens por vez e reorganizando o array com base no valor retornado (1, -1 ou 0).
+cars.sort(
+    function (a,b){
+        if(a.year > b.year){
+            return 1
+        }else if(a.year < b.year){
+            return -1
+        }else {
+            return 0
+        }
+    }
+)
+
+console.log(cars);
