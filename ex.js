@@ -157,3 +157,30 @@ for(i = 0 ;  i < alunos.length ; i++){
 
 
 
+
+
+// Crie um array - produtos
+let produtosLoja = [
+    {nome: 'Camiseta Básica Algodão', preco: 49.90, categoria: 'Vestuário - Camisetas'}, 
+    {nome: 'Calça Jeans Skinny', preco: 129.99, categoria: 'Vestuário - Calças'}, 
+    {nome: 'Boné Aba Curva', preco: 35.50, categoria: 'Acessórios - Cabeça'}, 
+    {nome: 'Jaqueta Corta-Vento', preco: 199.90, categoria: 'Vestuário - Agasalhos'}
+];
+
+produtosLoja.sort( (a,b) => {
+    if(a.preco > b.preco){
+        return 1
+    }else if(a.preco < b.preco) {
+        return -1
+    }else{
+        return 0
+    }
+});
+
+for (let i = 0; i < produtosLoja.length; i++) {
+    console.log(`Produto: ${produtosLoja[i].nome} | Categoria: ${produtosLoja[i].categoria} | Preço: R$ ${produtosLoja[i].preco}`);
+}
+
+
+
+
