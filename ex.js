@@ -184,3 +184,75 @@ for (let i = 0; i < produtosLoja.length; i++) {
 
 
 
+// Contador de pares e ímpares
+/*Crie um array com números de 1 a 20.
+Use um loop for ou while para contar:
+*/
+let numerosIP = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+
+let contaP = 0
+let contaI = 0 
+for(i = 0; i < numerosIP.length ; i++){
+    if(numerosIP[i] % 2 == 0){
+       contaP = contaP + 1
+    }else{
+        contaI= contaI+1
+    }
+    
+}
+console.log(`Existem ${contaP} números pares e ${contaI} números ímpares no array.`);
+
+
+
+
+//login simples
+let usuario3 = { nome: 'Pedro', senha: '1234' }
+
+function login(nomeDigitado,senhaDigitada){
+    if(nomeDigitado === usuario3.nome && senhaDigitada == usuario3.senha){
+        console.log("Login bem-sucedido!");
+        
+    }else{
+        console.log("Usuário ou senha incorretos!");
+        
+    }
+}
+
+login('Pedro','1234')
+
+
+
+
+//Filtrando carros novos
+let carros=[
+    {marca:'Fiat', ano: 2019},
+    {marca:'Chevrolet', ano: 2015},
+    {marca:'Bmw', ano: 2025},
+    {marca:'Hyundai', ano: 2022},
+    {marca:'Honda', ano: 2005}
+]
+
+// Usando um loop for
+for(i =0 ; i < carros.length; i++){
+    if(carros[i].ano > 2018){
+        console.log(`Carros com anos maiores que 2018 são: ${carros[i].marca} ano: ${carros[i].ano}`);
+    }
+}
+
+
+
+
+//Usando o método .filter()
+let carrosMordenos = carros.filter(function (item){
+    if (item.ano > 2018) {
+     console.log(`Carros com anos maiores que 2018 são: ${item.marca} ano: ${item.ano}`);
+}    
+})
+
+
+
+
+
+
+
+
