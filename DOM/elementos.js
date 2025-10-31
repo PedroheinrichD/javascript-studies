@@ -3,7 +3,7 @@ let ul = document.querySelector("#teste1 ul") // guardando o elemento HTML em um
 let button = document.querySelector(".button")  // guardando o elemento HTML em uma VAR
 
 
-function mudarLista() {
+function clicou() {
     ul.children[2].innerHTML = '<li>Mudouuu</li>' // alterando o item 2 do UL
     // A propriedade children é usada para acessar o elementos [Filho] --> exibe em um array 
     // ul -> pai , li -> filho
@@ -17,10 +17,22 @@ function mudarLista() {
     newLi.innerText = 'Novo li' // guardando valor no novo </li>
     ul.appendChild(newLi) // adicionando na lista </ul>
 
-
-
     // o prepend() funciona igual , só que ele adiciona no primeiro item e não no ultimo 
+
+
+
+    // criando um lista nova depois da lista criada
+    let newUl = document.createElement("ul")
+    for (let i = 0; i < 5; i++) {
+        let newli = document.createElement("li")
+        newli.innerHTML = "novo item" + i
+        newUl.append(newli)
+
+    }
+    ul.after(newUl)
+
+
 }
 // innerHTML -> exibe um texto com o conteúdo dentro, ou fazer alterações
-button.addEventListener("click", mudarLista) // evento de click que chama a função (mudarLista) quando for acionado 
+button.addEventListener("click", clicou) // evento de click que chama a função (mudarLista) quando for acionado 
 
