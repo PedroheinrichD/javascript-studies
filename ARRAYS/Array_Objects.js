@@ -157,3 +157,104 @@ cars.sort(
 )
 
 console.log(cars);
+
+
+
+
+let array = [1, 2, 3, 2, 2, 4]
+
+/* para que serve o map?? 
+   -> Transformação Direta: Ótimo para converter preços, formatar nomes ou extrair dados de objetos, sem fazer loops for manuais
+*/
+// uso do MAP() -> ele mapeia (percorre) cada elemento do array e gera um novo array com os resultados de uma "regra" que definimos 
+let numbersMforTWO = array.map(function (item) {
+    return item * 2
+})
+console.log(numbersMforTWO);
+
+
+//usando arrow function
+let numbers2 = array.map(number => number * 4) // o JS retorna automaticamente para quem chamou 
+console.log(numbers2);
+
+
+
+// USO do FILTER()
+
+let ages = [22, 55, 70, 9, 18, 28]
+
+// filtrar numeros pares
+let filternumber = ages.filter(function (number) {// executando a função para cada item do array 
+    return number % 2 === 0
+})
+console.log(`numeros pares -> ${filternumber}`);
+
+
+let filternumber2 = ages.filter(number => number % 2 === 0) // executando a arrow function para cada item do array
+console.log(`numeros pares -> ${filternumber2}`);
+
+
+
+// USO DO REDUCE() -> ele é bom quando queremos reduzir os itens do array para um só valor
+
+// somar todas os numeros do array
+let notas = [1, 2, 3, 4]
+
+let somaDasNotas = notas.reduce(function (acumulador, valor) {
+    return acumulador + valor
+}, 0) // o 0 é o ponto inicial(valor) do acumulador 
+
+/* 
+    acumulador recebe 0 de inicio;
+    1 + 0 acumulador fica 1;
+    1 + 2 acumulador fica 3;
+    3 + 3 acumulador fica 6;
+    6 + 4 acumulador fica 10; -> valor final 
+*/
+
+console.log(somaDasNotas);
+
+
+
+
+
+
+
+/*1️⃣ Crie uma função que receba um objeto representando uma pessoa:
+
+
+E retorne uma frase:
+
+"Pedro tem 22 anos e mora em São Paulo."
+
+*/
+
+
+let pessoa2 = {
+    nome: "Pedro",
+    idade: 22,
+    cidade: "São Paulo"
+}
+console.log(`${pessoa2.nome} tem ${pessoa2.idade} e mora em ${pessoa2.cidade}`);
+
+
+
+/*2️⃣ Crie uma função que receba um array de objetos com produtos:
+Retorne apenas os produtos com preço maior que 100.
+(Use filter)*/
+
+let perifericos = [
+    { nome: "Notebook", preco: 3000 },
+    { nome: "Mouse", preco: 50 },
+    { nome: "Teclado", preco: 200 }
+]
+
+let numerosM100filter = perifericos.filter( item => item.preco > 100)
+console.log(numerosM100filter.map(item => item.nome));
+
+
+
+
+
+
+
