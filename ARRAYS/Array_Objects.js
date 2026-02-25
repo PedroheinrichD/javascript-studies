@@ -243,13 +243,13 @@ console.log(`${pessoa2.nome} tem ${pessoa2.idade} e mora em ${pessoa2.cidade}`);
 Retorne apenas os produtos com preço maior que 100.
 (Use filter)*/
 
-let perifericos = [
+let produtos = [
     { nome: "Notebook", preco: 3000 },
     { nome: "Mouse", preco: 50 },
     { nome: "Teclado", preco: 200 }
 ]
 
-let numerosM100filter = perifericos.filter( item => item.preco > 100)
+let numerosM100filter = produtos.filter( item => item.preco > 100)
 console.log(numerosM100filter.map(item => item.nome));
 
 
@@ -258,3 +258,21 @@ console.log(numerosM100filter.map(item => item.nome));
 
 
 
+
+
+
+
+/*🔥 DESAFIO 1 — Soma Total 
+
+Usando reduce(), retorne o valor total dos produtos.
+
+Resultado esperado: 3200
+
+⚠️ Mas faz com arrow function limpa.*/
+
+
+
+let somaTotalProdutos = produtos.reduce((acumulador, valor ) => acumulador + valor.preco , 0)
+console.log(`soma total dos produtos -> ${somaTotalProdutos}`);
+
+console.log('====================================================================================');
