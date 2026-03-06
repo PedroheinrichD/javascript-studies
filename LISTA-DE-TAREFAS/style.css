@@ -1,0 +1,31 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+    background-color: #D9D9D9;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ebebeb;
+    height: 600px;
+    width: 600px;
+    border-radius: 35px;
+}
+
+h1{
+    position: fixed;
+    top: 170px;
+}
+
+#campo{
+    height: 24px;
+    width: 300px;
+    border-radius: 7px;
+    border: 1px solid rgba(0, 0, 0, 0.445);
+}
+
