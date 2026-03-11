@@ -1,20 +1,19 @@
 /*
 Desafio 2 — (Conta Bancária)
-Você precisa criar uma classe chamada ContaBancaria.
+Você precisa criar uma classe chamada Depósito.✅
 
-A conta deve possuir um saldo interno que começa com valor 0.
+A conta deve possuir um saldo interno que começa com valor 0. ✅
 
-Esse saldo não pode ser acessado diretamente fora da classe.
+Esse saldo não pode ser acessado diretamente fora da classe. ✅
 
 Agora crie duas coisas:
-
 1️⃣ Um mecanismo para depósito
 
 Regras do depósito:
-	•	só pode aceitar números
-	•	o valor precisa ser maior que 0
-	•	quando o valor for válido, ele deve ser somado ao saldo atual
-	•	se o valor for inválido, nada acontece
+	•	só pode aceitar números ✅
+	•	o valor precisa ser maior que 0 ✅
+	•	, equando o valor for válidole deve ser somado ao saldo atual ✅
+	•	se o valor for inválido, nada acontece ✅
 
 Exemplo de comportamento esperado:
 
@@ -36,6 +35,31 @@ o saldo permanece 150
 Você precisa de uma forma de ver o saldo atual.
 
 Essa ação:
-	•	não pode modificar o saldo
-	•	apenas retorna o valor atual
+	•	não pode modificar o saldo ✅
+	•	apenas retorna o valor atual ✅
 */
+
+
+class BankAccount{
+    _value = 0;
+
+    set value(value){
+        if (typeof value === 'number' && value > 0) {
+            this._value += value       
+        }
+    }
+
+    get value(){
+        return this._value
+    }
+
+}
+
+const newDeposit = new BankAccount();
+
+newDeposit.value = 100;// SET
+newDeposit.value = 50;// SET
+
+
+console.log(`deposit amount: ${newDeposit.value}`);// GET
+
