@@ -41,9 +41,20 @@ function clicou() {
             return response.json() // retorna em forma de OBJETO
         })
         .then((dados) => {
-            console.log(dados); // dados recebe a resposta em formato de OBJETO para manipular
+            let id = dados[0].id
+            console.log(`o ID DO PRIMEIRO PERFIL --> ${id}`);
+
+            console.log(dados);
+            
+            
+            
 
         })
+
+        // catch serve para retornar o erro caso a requisição falhe
+        .catch((error) => {
+            console.log(error);
+        })  
 }
 
 document.querySelector('#enviar').addEventListener('click', clicou)
