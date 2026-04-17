@@ -45,18 +45,49 @@ function clicou() {
             console.log(`o ID DO PRIMEIRO PERFIL --> ${id}`);
 
             console.log(dados);
-            
-            
-            
-
         })
+
+
 
         // catch serve para retornar o erro caso a requisição falhe
         .catch((error) => {
             console.log(error);
-        })  
+        })
+
+    // o método GET vem por padrao, alem dele temos os POST, PUT, DELETE
+
+    /*primeiro parâmetro é o método
+        headers: com o content type: json de aplicação 
+        e logo em seguida temos o body: com a conversão do ({obj para string: com os respectivos dados, ex: title, userId, O QUE TIVER QUE MUDAR DENTRO DO OBJETO DA REQUISIÇÃO API})
+    */
 }
 
+
+
+
+// adicionando novo post, em uma requisição HTTP, onde temos body: corpo do post, title, userId, depende do que é salvo na requisição
+function post() {
+    fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: 'POST', 
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify({ // devolve um objeto em forma de string com os respectivos dados
+            body: 'conteudo principal do post (corpo da pagina)',
+            title: 'titulo do post',
+            userId: 25
+        })
+    }).then((response) => { // pegando a resposta em forma de string 
+        response.json()// convertendo em forma de JSON/OBJECT
+
+    }).then((json) => {
+        console.log(json);
+        
+    })
+}
+
+
 document.querySelector('#enviar').addEventListener('click', clicou)
+document.querySelector('#post').addEventListener('click', post)
 
 
